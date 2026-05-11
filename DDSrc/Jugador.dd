@@ -1,0 +1,10 @@
+Use DataDict.pkg
+Open Jugador
+Open Equipo
+
+Object Jugador_DD is a cDataDictionary
+    Set Main_File to Jugador.File_Number
+    Set Cascade_Delete_State to False
+    // Corrección del índice no único de MySQL advertido por Upsize
+    Set Field_Index Field Jugador.Apellido to 2
+End_Object

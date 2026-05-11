@@ -1,0 +1,6 @@
+Use DataDict.pkg
+Open Equipo
+
+Object Equipo_DD is a cDataDictionary
+    Set Main_File to Equipo.File_Number
+End_Object
