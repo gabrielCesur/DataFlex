@@ -5,6 +5,13 @@ Open Equipo
 Object Jugador_DD is a cDataDictionary
     Set Main_File to Jugador.File_Number
     Set Cascade_Delete_State to False
-    // Corrección del índice no único de MySQL advertido por Upsize
+    
+    // Conexión relacional con Equipo
+    Set Add_Server_File to Equipo.File_Number
+    
+    // Corrección del índice no único de MySQL advertido por Upsize (mencionado en informe)
     Set Field_Index Field Jugador.Apellido to 2
+    
+    Set Field_Option Field Jugador.Nombre DD_REQUIRED to True
+    Set Field_Option Field Jugador.Apellido DD_REQUIRED to True
 End_Object

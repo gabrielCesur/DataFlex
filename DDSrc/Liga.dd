@@ -1,0 +1,14 @@
+Use DataDict.pkg
+Open Liga
+
+Object Liga_DD is a cDataDictionary
+    Set Main_File to Liga.File_Number
+    Set Cascade_Delete_State to False
+    
+    // Validación de campos
+    Set Field_Option Field Liga.Nombre DD_REQUIRED to True
+    Set Field_Option Field Liga.Pais DD_REQUIRED to True
+    
+    // Valores por defecto mencionados en SQL
+    Set Field_Default_Value Field Liga.EquiposMax to 20
+End_Object

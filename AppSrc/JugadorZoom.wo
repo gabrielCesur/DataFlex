@@ -1,1 +1,18 @@
-// Zoom view for Jugador
+Use cWebView.pkg
+Use cWebForm.pkg
+Use DDSrc/Jugador.dd
+
+Object oJugadorZoom is a cWebView
+    Set psCaption to "Detalle de Jugador"
+    Object oJugador_DD is a Jugador_DD
+    End_Object
+    Set Main_DD to oJugador_DD
+    Object oNombre is a cWebForm
+        Entry_Item Jugador.Nombre
+        Set psCaption to "Nombre"
+    End_Object
+    Object oApellido is a cWebForm
+        Entry_Item Jugador.Apellido
+        Set psCaption to "Apellido"
+    End_Object
+End_Object

@@ -1,6 +1,13 @@
 Use DataDict.pkg
 Open Equipo
+Open Liga
 
 Object Equipo_DD is a cDataDictionary
     Set Main_File to Equipo.File_Number
+    Set Cascade_Delete_State to False
+    
+    // Conexión relacional con Liga
+    Set Add_Server_File to Liga.File_Number
+    
+    Set Field_Option Field Equipo.Nombre DD_REQUIRED to True
 End_Object

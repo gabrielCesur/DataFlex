@@ -1,0 +1,18 @@
+Use cWebView.pkg
+Use cWebForm.pkg
+Use DDSrc/Entrenador.dd
+
+Object oEntrenadorZoom is a cWebView
+    Set psCaption to "Detalle de Entrenador"
+    Object oEntrenador_DD is a Entrenador_DD
+    End_Object
+    Set Main_DD to oEntrenador_DD
+    Object oNombre is a cWebForm
+        Entry_Item Entrenador.Nombre
+        Set psCaption to "Nombre"
+    End_Object
+    Object oApellido is a cWebForm
+        Entry_Item Entrenador.Apellido
+        Set psCaption to "Apellido"
+    End_Object
+End_Object
