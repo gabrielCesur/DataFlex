@@ -1,0 +1,67 @@
+Use AllWebAppClasses.pkg
+
+Object oWebApp is a cWebApp
+    Set psCaption to "FutbolWebApp - Gestión Deportiva"
+    Set psTheme to "Df_Material"
+
+    Object oHeaderPanel is a cWebPanel
+        Set peRegion to prTop
+        
+        Object oMenuPanel is a cWebPanel
+            Set peRegion to prLeft
+            Set piWidth to 50
+            
+            Object oWebMenu is a cWebMenuButton
+                Set psCaption to "Menú"
+                
+                Object oDashboardItem is a cWebMenuItem
+                    Set psCaption to "Dashboard"
+                    Procedure OnClick
+                        Send NavigateBegin to oDashboard
+                    End_Procedure
+                End_Object
+
+                Object oViewsMenu is a cWebMenuItem
+                    Set psCaption to "Vistas"
+                    
+                    Object oJugadoresItem is a cWebMenuItem
+                        Set psCaption to "Jugadores"
+                        Procedure OnClick
+                            Send NavigateBegin to oJugadorSelect
+                        End_Procedure
+                    End_Object
+
+                    Object oEquiposItem is a cWebMenuItem
+                        Set psCaption to "Equipos"
+                        Procedure OnClick
+                            Send NavigateBegin to oEquipoSelect
+                        End_Procedure
+                    End_Object
+                End_Object
+                
+                Object oLogoutItem is a cWebMenuItem
+                    Set psCaption to "Cerrar Sesión"
+                    Procedure OnClick
+                        Send RequestLogout
+                    End_Procedure
+                End_Object
+            End_Object
+        Object oBreadcrumb is a cWebBreadcrumb
+            Set peRegion to prCenter
+        End_Object
+    End_Object
+
+    // Vistas del Sistema
+    Use Dashboard.wo
+    Use JugadorSelect.wo
+    Use JugadorZoom.wo
+    Use EquipoSelect.wo
+    Use EquipoZoom.wo
+    Use EntrenadorSelect.wo
+    Use EntrenadorZoom.wo
+    Use LigaSelect.wo
+    Use LigaZoom.wo
+    Use PosicionSelect.wo
+    Use PosicionZoom.wo
+
+End_Object

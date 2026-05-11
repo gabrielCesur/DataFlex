@@ -1,0 +1,13 @@
+Use DataDict.pkg
+Open JugadorPosicion
+Open Jugador
+Open Posicion
+
+Object JugadorPosicion_DD is a cDataDictionary
+    Set Main_File to JugadorPosicion.File_Number
+    Set Cascade_Delete_State to False
+
+    // Relaciones Many-to-Many
+    Set Add_Server_File to Jugador.File_Number
+    Set Add_Server_File to Posicion.File_Number
+End_Object

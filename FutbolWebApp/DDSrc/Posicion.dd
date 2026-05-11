@@ -1,0 +1,9 @@
+Use DataDict.pkg
+Open Posicion
+
+Object Posicion_DD is a cDataDictionary
+    Set Main_File to Posicion.File_Number
+    Set Cascade_Delete_State to False
+    
+    Set Field_Option Field Posicion.Nombre DD_REQUIRED to True
+End_Object

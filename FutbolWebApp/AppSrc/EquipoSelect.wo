@@ -1,0 +1,16 @@
+Use cWebView.pkg
+Use cWebList.pkg
+Use DDSrc/Equipo.dd
+
+Object oEquipoSelect is a cWebView
+    Set psCaption to "Seleccionar Equipo"
+    Object oEquipo_DD is a Equipo_DD
+    End_Object
+    Set Main_DD to oEquipo_DD
+    Object oList is a cWebList
+        Object oNombre is a cWebColumn
+            Entry_Item Equipo.Nombre
+            Set psCaption to "Nombre"
+        End_Object
+    End_Object
+End_Object

@@ -1,0 +1,21 @@
+# DataFlex system files
+Programs/*.exe
+Programs/*.dll
+Programs/*.pdb
+Programs/*.log
+Data/*.vld
+Data/*.idx
+Data/*.lck
+AppHtml/*.log
+IdeSrc/*.pki
+IdeSrc/*.pkh
+
+# Temporary and backup files
+*.bak
+*.tmp
+*.sub
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db

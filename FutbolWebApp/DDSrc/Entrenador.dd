@@ -1,0 +1,15 @@
+Use DataDict.pkg
+Open Entrenador
+Open Equipo
+
+Object Entrenador_DD is a cDataDictionary
+    Set Main_File to Entrenador.File_Number
+    Set Cascade_Delete_State to False
+    
+    // Conexión relacional
+    Set Add_Server_File to Equipo.File_Number
+    
+    // Validación de campos (estándar DataFlex)
+    Set Field_Option Field Entrenador.Nombre DD_REQUIRED to True
+    Set Field_Option Field Entrenador.Apellido DD_REQUIRED to True
+End_Object

@@ -1,0 +1,36 @@
+/* Estilos corporativos para FutbolWebApp - Data Control */
+
+.tile {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #f5f9ff;
+}
+
+.tile-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.tile-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

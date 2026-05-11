@@ -1,0 +1,10 @@
+VideosTranscripciones/
+*.log
+*.aux
+*.out
+*.toc
+*.swp
+.DS_Store
+mockups/
+*.png
+*.tex
