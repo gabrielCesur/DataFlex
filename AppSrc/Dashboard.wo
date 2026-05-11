@@ -1,0 +1,18 @@
+Use cWebView.pkg
+Use cWebHtmlBox.pkg
+
+Object oDashboard is a cWebView
+    Set psCaption to "FutbolWebApp - Dashboard"
+
+    Object oTileJugadores is a cWebHtmlBox
+        Set piColumnIndex to 2
+        Set piColumnSpan to 2
+        Set psHtml to '<div class="tile">Jugadores</div>'
+        
+        Procedure OnClick String sId String sParam
+            Forward Send OnClick sId sParam
+            // Configuración explícita de navegación
+            Send NavigatePath to oJugadorSelect
+        End_Procedure
+    End_Object
+End_Object
